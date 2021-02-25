@@ -1,6 +1,6 @@
 require 'pry'
 
-class BST 
+class Node 
   attr_accessor :data, :left, :right
 
   def initialize(data)
@@ -11,9 +11,9 @@ class BST
   
   def insert(data)
     if data <= self.data
-      self.left ? self.left.insert(data) : self.left = BST.new(data)
+      self.left ? self.left.insert(data) : self.left = Node.new(data)
     else
-      self.right ? self.right.insert(data) : self.right = BST.new(data)
+      self.right ? self.right.insert(data) : self.right = Node.new(data)
     end
   end
   
